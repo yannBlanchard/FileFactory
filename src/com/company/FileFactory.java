@@ -15,15 +15,20 @@ public final class FileFactory {
     private FileFactory() {
     }
 
-    public Fichier createFile(String fileType,String name,String type){
+    public Fichier createFile(TypeFichier fileType,String name,TypeLecture type){
         if(fileType == null){
             return null;
         }
-        if(fileType.equalsIgnoreCase("FICHIERORDINAIRE")){
-            return new FichierOrdinaire(name,type);
-        } else if(fileType.equalsIgnoreCase("REPERTOIRE")){
-            return new Repertoire(name,type);
+        switch (fileType){
+            case Repertoire:
+                return new Repertoire(name,type);
+            case Fichier:
+                return new FichierOrdinaire(name,type);
+            default:
+                System.out.println("Erreur type inconnu");
+                break;
         }
+
         return  null;
     }
 }

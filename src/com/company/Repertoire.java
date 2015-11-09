@@ -5,12 +5,12 @@ package com.company;
  */
 public class Repertoire implements Fichier {
     String nom;
-    String typeOuverture;
+    TypeLecture typeOuverture;
     int id;
 
-    public Repertoire(String nom, String typeOuverture) {
+    public Repertoire(String nom, TypeLecture type) {
         this.nom = nom;
-        this.typeOuverture = typeOuverture;
+        this.typeOuverture = type;
     }
 
     @Override

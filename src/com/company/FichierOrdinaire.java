@@ -5,12 +5,12 @@ package com.company;
  */
 public class FichierOrdinaire implements Fichier {
     String nom;
-    String typeOuverture;
+    TypeLecture typeOuverture;
     int id;
 
-    public FichierOrdinaire(String nom, String typeOuverture) {
+    public FichierOrdinaire(String nom, TypeLecture type) {
         this.nom = nom;
-        this.typeOuverture = typeOuverture;
+        this.typeOuverture = type;
     }
 
     @Override
