@@ -6,7 +6,6 @@ package com.company;
 public class FichierOrdinaire implements Fichier {
     String nom;
     TypeLecture typeOuverture;
-    int id;
 
     public FichierOrdinaire(String nom, TypeLecture type) {
         this.nom = nom;
@@ -14,17 +13,18 @@ public class FichierOrdinaire implements Fichier {
     }
 
     @Override
-    public void add() {
+    public void add(Fichier file) {
         
     }
 
     @Override
-    public void remove() {
+    public void remove(Fichier file) {
 
     }
 
     @Override
-    public void modifier() {
+    public void modifier(Fichier file) {
 
     }
+
 }
